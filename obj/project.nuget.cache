@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "yqOImQvfL9WY2gt9wJwIWYUe1qvyQbrEMcLYZaQ8zEH8XZ7A1IT0pTl75qVRkoYnL0+RXhlkOlDty0cAM3KQtw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\atrajanovski\\source\\repos\\EndavaCrossPlatform\\EndavaCrossPlatform.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\atrajanovski\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}

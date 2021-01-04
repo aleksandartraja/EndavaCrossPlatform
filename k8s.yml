@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: endava-crossplatform
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: endava-crossplatform
+  template:
+    metadata:
+      labels:
+        app: endava-crossplatform
+    spec:
+      nodeSelector:
+        kubernetes.io/os: linux
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: api
+        image: okteto/endava-crossplatform:aspnetcore
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: endava-crossplatform
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+  labels:
+    app: endava-crossplatform
+spec:
+  type: ClusterIP
+  ports:
+    - name: endava-crossplatform
+      port: 5000
+  selector:
+    app: endava-crossplatform
