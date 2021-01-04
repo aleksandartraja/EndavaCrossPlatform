@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 0
       containers:
       - name: api
-        image: okteto/endava-crossplatform:aspnetcore
+        image: aleksandartraja/endava-crossplatform:aspnetcore
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
